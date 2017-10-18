@@ -10,6 +10,8 @@ for line in output:
     line = line.strip()
     if 'Protocol' in line:
         continue
+    # If we don't care about any data from the output, we can use the _ (underscore)
+    # to ignore them.
     _, ip_address, age, mac_address, _, intf = line.split()
     ip_dict[ip_address] = mac_address
 
