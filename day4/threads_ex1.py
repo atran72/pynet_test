@@ -28,3 +28,18 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+'''
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.5/threading.py", line 914, in _bootstrap_inner
+    self.run()
+  File "/usr/lib64/python3.5/threading.py", line 862, in run
+    self._target(*self._args, **self._kwargs)
+  File "./threads_ex1.py", line 12, in remote_cmd
+    remote_conn = ConnectHandler(**a_device)
+TypeError: ConnectHandler() argument after ** must be a mapping, not str
+
+'''

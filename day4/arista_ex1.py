@@ -18,6 +18,14 @@ def main():
 
     Print these routes and the associated information to stdout.
     """
+    """
+    connect_to() looks for info in "~/.eapi.conf" by default.
+    [connection:pynet-sw4]
+    username: eapi
+    password: 17mendel
+    host: 184.105.247.75
+    transport: https
+    """
     pynet_sw = pyeapi.connect_to("pynet-sw4")
     output = pynet_sw.enable("show ip route")
 
@@ -39,3 +47,16 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+'''
+OUTPUT:
+
+(py35_venv)[student12@ip-172-30-0-233 day4]$ ./arista_ex1.py
+
+         prefix       interface        next_hop
+--------------- --------------- ---------------
+ 10.220.88.0/24           Vlan1             N/A
+      0.0.0.0/0           Vlan1     10.220.88.1
+
+'''
