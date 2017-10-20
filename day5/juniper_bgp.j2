@@ -2,10 +2,12 @@ protocols {
     bgp {
         group external-peers {
             type external;
-            peer-as {{ peer_as }};
-            neighbor {{ neighbor1 }};
-            neighbor {{ neighbor2 }};
-            neighbor {{ neighbor3 }};
+            peer1_as =  {{ neighbor1_as }};
+            neighbor1_ip = {{ neighbor1_ip }};
+            peer2_as =  {{ neighbor2_as }};
+            neighbor2_ip = {{ neighbor2_ip }};
+            peer3_as =  {{ neighbor3_as }};
+            neighbor3_ip = {{ neighbor3_ip }};
         }
     }
 }
